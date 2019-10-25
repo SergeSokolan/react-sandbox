@@ -9,7 +9,7 @@ export const Container = styled.div`
 
 export const TextEditor = styled.div`
   width: 50%;
-  padding: 20px;
+  padding: 10px;
   box-sizing: border-box;
 `;
 
@@ -71,7 +71,7 @@ export const Text = styled.p`
 export const CommentList = styled.div`
   width: 50%;
   margin: 0;
-  padding: 20px 20px 20px 0;
+  padding: 10px;
   box-sizing: border-box;
 `;
 export const Comment = styled.div`
