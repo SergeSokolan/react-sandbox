@@ -1,7 +1,7 @@
 import React, { PureComponent } from 'react';
 import { Preview, PreviewLabel, PreviewText } from '../styles';
 
-export class PreviewBlock extends PureComponent {
+export class PreviewField extends PureComponent {
   render() {
     return (
       <Preview>

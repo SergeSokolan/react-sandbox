@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { Container, TextEditor } from './styles';
 
 import { TextField } from './TextEditor/TextField';
-import { PreviewBlock } from './TextEditor/PreviewBlock';
+import { PreviewField } from './TextEditor/PreviewField';
 import { SendButton } from './TextEditor/SendButton';
 import { Comments } from './Comments';
 
@@ -41,7 +41,7 @@ export default class App extends Component {
       <Container>
         <TextEditor>
           <TextField textareaChange={this.previewText} />
-          <PreviewBlock text={previewText} />
+          <PreviewField text={previewText} />
           <SendButton handleClick={this.handleClick} />
         </TextEditor>
         <Comments comments={comments} />
