@@ -1,12 +1,12 @@
 import React, { PureComponent } from 'react';
-import { Preview, PreviewLabel, PreviewText } from '../styles';
+import { Preview, Label, Text } from '../styles';
 
 export class PreviewField extends PureComponent {
   render() {
     return (
       <Preview>
-        <PreviewLabel>Preview:</PreviewLabel>
-        <PreviewText>{this.props.text}</PreviewText>
+        <Label>Preview:</Label>
+        <Text>{this.props.text}</Text>
       </Preview>
     );
   }

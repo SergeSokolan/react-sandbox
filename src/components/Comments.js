@@ -1,17 +1,17 @@
 import React, { Component } from 'react';
-import { Comment, CommentLabel, CommentText } from './styles';
+import { Comment, CommentList, Label, Text } from './styles';
 
 export class Comments extends Component {
   render() {
     const comments = this.props.comments.map( (comment, index) => {
       return (
         <Comment key={index}>
-          <CommentLabel>your comment:</CommentLabel>
-          <CommentText>{comment}</CommentText>
+          <Label>your comment:</Label>
+          <Text>{comment}</Text>
         </Comment>
       );
     });
 
-    return <div>{comments}</div>;
+    return <CommentList>{comments}</CommentList>;
   }
 }
