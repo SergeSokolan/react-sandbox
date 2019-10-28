@@ -9,13 +9,13 @@ export class Tab extends PureComponent {
   }
 
   handleChange() {
-    const { ChangeTabContent, label } = this.props;
-    ChangeTabContent(label);
+    const { changeContent, label } = this.props;
+    changeContent(label);
   }
 
   render() {
     return (
-      <Button onClick={this.handleChange} color='blue' kind='tab'>
+      <Button onClick={this.handleChange} kind='tab'>
         {this.props.label}
       </Button>
     );

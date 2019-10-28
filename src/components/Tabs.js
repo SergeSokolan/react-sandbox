@@ -15,7 +15,7 @@ export class Tabs extends Component {
     };
   }
 
-  ChangeContent(tab) {
+  changeContent(tab) {
     this.setState({
       activeTab: tab
     });
@@ -30,7 +30,7 @@ export class Tabs extends Component {
     const tabs = children.map(child => {
       const { label } = child.props;
       return (
-        <Tab ChangeTabContent={this.ChangeContent} label={label} key={`tab_${label}`} />
+        <Tab changeContent={this.changeContent} label={label} key={`tab_${label}`} />
       );
     });
 

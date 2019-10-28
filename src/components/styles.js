@@ -15,8 +15,8 @@ export const Button = styled.button`
   border: none;
 
   background-color: ${props =>
-    (props.color === 'primary' && '#8a6ed7') ||
-    (props.color === 'blue' && '#256D7B')};
+    (props.kind === 'submit' && '#8a6ed7') ||
+    (props.kind === 'tab' && '#256D7B')};
 
   margin-right: ${props => (props.kind === 'tab' ? '10px' : '0')};
 
@@ -45,6 +45,8 @@ export const Textarea = styled.textarea`
   box-sizing: border-box;
   font-size: 12px;
   min-height: 200px;
+  max-height: 500px;
+  resize: vertical;
 `;
 
 export const Preview = styled.div`
