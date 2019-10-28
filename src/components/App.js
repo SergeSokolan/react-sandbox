@@ -6,6 +6,7 @@ import { PreviewField } from './TextEditor/PreviewField';
 import { SendButton } from './TextEditor/SendButton';
 import { Comments } from './Comments';
 import { Tabs } from './Tabs';
+import { SortFilms } from './SortFilms';
 
 export default class App extends Component {
   constructor() {
@@ -50,7 +51,9 @@ export default class App extends Component {
             <Comments comments={comments} />
           </Section>
 
-          <Section label='Sort films'>Sort films in progress...</Section>
+          <Section label='Sort films'>
+            <SortFilms />
+          </Section>
 
           <Section label='TODO'>TODO in progress...</Section>
         </Tabs>
