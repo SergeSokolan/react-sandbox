@@ -4,7 +4,7 @@ import { Button } from '../styles';
 export class SendButton extends PureComponent {
   render() {
     return (
-      <Button onClick={this.props.handleClick}>Send</Button>
+      <Button onClick={this.props.handleClick} color={'primary'}>Send</Button>
     );
   }
 }

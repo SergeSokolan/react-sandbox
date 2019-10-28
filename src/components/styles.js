@@ -3,19 +3,23 @@ import styled from 'styled-components';
 export const Container = styled.div`
   font-family: 'Roboto', sans-serif;
   display: flex;
-  width: 600px;
+  width: 800px;
   margin: auto;
 `;
 
 export const TextEditor = styled.div`
-  width: 50%;
   padding: 10px;
-  box-sizing: border-box;
 `;
 
 export const Button = styled.button`
   border: none;
-  background-color: #8a6ed7;
+
+  background-color: ${props =>
+    (props.color === 'primary' && '#8a6ed7') ||
+    (props.color === 'blue' && '#256D7B')};
+
+  margin-right: ${props => (props.kind === 'tab' ? '10px' : '0')};
+
   padding: 7px 15px 5px;
   text-transform: uppercase;
   font-family: 'Arial';
@@ -27,10 +31,10 @@ export const Button = styled.button`
   &:hover {
     opacity: 0.8;
   }
+`;
 
-  &:focus {
-    outline: none;
-  }
+export const TabLIst = styled.div`
+  padding: 0 10px;
 `;
 
 export const Textarea = styled.textarea`
@@ -41,10 +45,6 @@ export const Textarea = styled.textarea`
   box-sizing: border-box;
   font-size: 12px;
   min-height: 200px;
-
-  &:focus {
-    outline: none;
-  }
 `;
 
 export const Preview = styled.div`
@@ -69,7 +69,7 @@ export const Text = styled.p`
 `;
 
 export const CommentList = styled.div`
-  width: 50%;
+  width: 100%;
   margin: 0;
   padding: 10px;
   box-sizing: border-box;
@@ -80,3 +80,15 @@ export const Comment = styled.div`
   padding: 10px;
   background-color: #e6eeff;
 `;
+
+export const TabContainer = styled.div`
+  width: 100%;
+  padding: 10px;
+  box-sizing: border-box;
+`;
+
+export const TabContent = styled.div`
+  ${props => !props.isActive && 'display: none;'}
+`;
+
+export const Section = styled.div``;

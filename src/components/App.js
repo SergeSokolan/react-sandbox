@@ -1,10 +1,11 @@
 import React, { Component } from 'react';
-import { Container, TextEditor } from './styles';
+import { Container, TextEditor, Section } from './styles';
 
 import { TextField } from './TextEditor/TextField';
 import { PreviewField } from './TextEditor/PreviewField';
 import { SendButton } from './TextEditor/SendButton';
 import { Comments } from './Comments';
+import { Tabs } from './Tabs';
 
 export default class App extends Component {
   constructor() {
@@ -26,7 +27,7 @@ export default class App extends Component {
         return { comments };
       }
     });
-  }
+  };
 
   previewText(text) {
     this.setState({
@@ -39,12 +40,20 @@ export default class App extends Component {
 
     return (
       <Container>
-        <TextEditor>
-          <TextField textareaChange={this.previewText} />
-          <PreviewField text={previewText} />
-          <SendButton handleClick={this.handleClick} />
-        </TextEditor>
-        <Comments comments={comments} />
+        <Tabs>
+          <Section label='Comments'>
+            <TextEditor>
+              <TextField textareaChange={this.previewText} />
+              <PreviewField text={previewText} />
+              <SendButton handleClick={this.handleClick} />
+            </TextEditor>
+            <Comments comments={comments} />
+          </Section>
+
+          <Section label='Sort films'>Sort films in progress...</Section>
+
+          <Section label='TODO'>TODO in progress...</Section>
+        </Tabs>
       </Container>
     );
   }
