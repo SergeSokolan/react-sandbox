@@ -33,7 +33,7 @@ export const Button = styled.button`
 `;
 
 export const TabLIst = styled.div`
-  nargin-bottom: 15px;
+  margin-bottom: 20px;
   padding: 0 10px 10px;
   border-bottom: 1px solid #cacaca;
 `;
