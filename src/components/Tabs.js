@@ -8,7 +8,7 @@ export class Tabs extends Component {
   constructor(props) {
     super(props);
 
-    this.ChangeContent = this.ChangeContent.bind(this);
+    this.changeContent = this.changeContent.bind(this);
 
     this.state = {
       activeTab: this.props.children[0].props.label
@@ -46,7 +46,6 @@ export class Tabs extends Component {
     return (
       <TabContainer>
         <TabLIst>{tabs}</TabLIst>
-        <hr />
         {content}
       </TabContainer>
     );
