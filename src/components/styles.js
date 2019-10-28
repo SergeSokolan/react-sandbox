@@ -78,9 +78,8 @@ export const CommentList = styled.div`
   box-sizing: border-box;
 `;
 export const Comment = styled.div`
-  display: inline-=block;
   margin-bottom: 10px;
-  padding: 10px 0;
+  padding: 10px;
   background-color: #e6eeff;
 `;
 
