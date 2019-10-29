@@ -7,6 +7,7 @@ import { SendButton } from './TextEditor/SendButton';
 import { Comments } from './Comments';
 import { Tabs } from './Tabs';
 import { SortFilms } from './SortFilms';
+import { TodoList } from './TodoList';
 
 export default class App extends Component {
   constructor() {
@@ -55,7 +56,7 @@ export default class App extends Component {
             <SortFilms />
           </Section>
 
-          <Section label='TODO'>TODO in progress...</Section>
+          <Section label='TODO'><TodoList /></Section>
         </Tabs>
       </Container>
     );
